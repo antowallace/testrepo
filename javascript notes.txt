@@ -1,0 +1,67 @@
+// create objects
+function Car(make, model) {
+	this.make = make;
+	this.model = model;
+	this.getName = function () {
+		return make + " " + model;
+	}
+}
+
+var c = new Car("meridian", "saber gt");
+alert(c.getName());
+Car.prototype.color = "Red" //add new properties/method 
+
+Car.prototype.newName = function () {
+		return this.make + " " + "hola";
+	}
+ 
+
+//common APIs
+//document
+document.getElementById(id)
+
+//example all img with the tagname img
+var imgSet = document.getElementByTagName("img");
+var output = "";
+for (var i=0; i< imgSet.length; i++) {
+	output += "<p> Source for image ";
+	output += i;
+	output +=": ";
+	output += imgSet[i].src;
+	output += "</p>";
+}
+document.write(output);
+
+function addPara {
+	var newPara = document.createElement("p");
+	//or newPara.innerHTML = "hELLO";
+	var newText = document.createTextNode("Hello");
+	newPara.appendChild(newText);
+	document.body.appenChild(newPara);
+}
+
+//change style
+<script>
+	var div1 = document.getElementById("div1");
+	div1.style.color = "red";
+</script>
+
+document.getElementByTagName(name);
+document.createElement(name);
+parentNode.appendChild(node);
+
+//element
+element.innerHTML
+element.style
+element.setAttribute(attrName, attrValue);
+element.getAttribute(attrName)
+element.removeAttribute(attrName);
+
+
+//window
+window.open(url, name, [feature,replace]); //url:location of display; name of the window, placememnt and dimensions of window, replace optional
+window.onload //start a function after the page is loaded
+window.dump("message") //write a string into the console for the web browser
+window.scrollTo(x-value, y-value); //scroll the web page to a particolar coordinate
+
+
